@@ -1,207 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>初觉</title>
-    <!-- 常规css reset -->
-    <link rel="stylesheet" type="text/css" href="css/reset.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <script type="text/javascript" src="js/music-list.js"></script>
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/music.js"></script>
-    <script type="text/javascript">
-        jQuery(function() {
-            new MusicPlayer();
-            jQuery("nav ul li").eq(3).hover(function(e) {
-                jQuery("div.menu").animate({
-                    right : 10
-                }, 500);
-            }, function() {});
-            jQuery("div.menu").hover(function() {
-            }, function() {
-                jQuery("div.menu").animate({
-                    right : -300
-                }, 500);
-            });
-        });
-    </script>
+	<meta charset="UTF-8">
+	<title>陈世豪的博客</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-    <div class="main-wrapper">
-        <!-- 页头start -->
-        <header>
-            <nav>
-                <div class="logo"><a href="more.html" target="_blank">初觉</a></div>
-                <ul>
-                    <li><a href="#" class="active">首页</a></li>
-                    <li><a href="#">登录</a></li>
-                    <li><a href="#">注册</a></li>
-                    <li><a href="#">菜单</a></li>
-                    <li><a href="#">订阅</a></li>
-                </ul>
-            </nav>
-            <div class="menu">
-                <div class="menu-content">
-                    <p><a href="#">see you again</a></p>
-                    <p><a href="#">那是我第一次遇见他</a></p>
-                </div>
-            </div>
-            <div class="music-wrapper">
-                <div class="music-info">
-                    <div class="star-img">
-                        <img src="images/music/star/su7.png" alt="">
-                    </div>
-                    <div class="star-info">
-                        小美女
-                    </div>
-                </div>
-                <div class="music-doing">
-                    <span class="music-do">正在播放</span>
-                    <span class="music-name">See You Again</span>
-                </div>
-                <div class="music-time">
-                    <span class="time-cur">00:00</span>
-                    <span class="time-sum">00:00</span>
-
-                </div>
-                <div class="progress-bar">
-                    <div class="progress"></div>
-                </div>
-                <audio src="media/See%20You%20Again.mp3">
-                    <p>你的浏览器不支持HTML5</p>
-                </audio>
-                <div class="music-button">
-                    <div class="btn-prev"><</div>
-                    <div class="btn-play play">+</div>
-                    <div class="btn-next">></div>
-                </div>
-                <div class="music-volume">
-                    <div class="volume"></div>
-                </div>
-                <div class="music-footer">
-                    <ul>
-                        <li class="icon-ama" title="点赞"></li>
-                        <li class="icon-ran" title="随机"></li>
-                        <li class="icon-sin" title="单曲"></li>
-                    </ul>
-                    <div class="icon-list"></div>
-                </div>
-            </div>
-            <div id="banner">
-                <div class="inner">
-                    <h1>初觉</h1>
-                    <p class="sub-heading">分享个人感动的故事</p>
-                    <button>了解我</button>
-                    <div class="more">
-                        更多
-                    </div>
-                </div>
-            </div>
-        </header>
-        <!-- 页头end -->
-        <!-- 内容start -->
-        <div class="content">
-            <section class="green-section">
-                <div class="wrapper">
-                    <div>
-                        <h2>关于初觉</h2>
-                        <div class="hr"></div>
-                        <p class="sub-heading">初觉这个名字，也是最近两天才想起来，
-                        更多的是个人的文字情节吧</p>
-                    </div>
-                    <div class="icon-group">
-                        <span class="icon">支持</span>
-                        <span class="icon">吐槽</span>
-                        <span class="icon">点赞</span>
-                    </div>
-                </div>
-            </section>
-            <section class="gray-section">
-                <div class="article-preview">
-                    <div class="image-section">
-                        <img src="images/c1.jpg" alt="">
-                    </div>
-                    <div class="text-section">
-                        <h2>它说她失宠</h2>
-                        <div class="sub-heading">夜未眠</div>
-                        <p>流水如年，岁月如歌，他和她在同一个城市相遇，却彼此变得那么陌生</p>
-                    </div>
-                </div>
-                <div class="article-preview">
-                    <div class="text-section">
-                        <h2>一座城池</h2>
-                        <div class="sub-heading">落寞</div>
-                        <p>雨未停，人却走，这座城市的灯火，神秘而又破落</p>
-                    </div>
-                    <div class="image-section">
-                        <img src="images/c2.jpg" alt="">
-                    </div>
-                </div>
-                <div class="article-preview">
-                    <div class="image-section">
-                        <img src="images/c3.jpg" alt="">
-                    </div>
-                    <div class="text-section">
-                        <h2>等秋来</h2>
-                        <div class="sub-heading">年末</div>
-                        <p>最终我们会在一个地方相遇，那时，你还会如初，依旧吟唱那首喜欢的歌</p>
-                    </div>
-                </div>
-            </section>
-            <section class="purple-section">
-                <div class="wrapper">
-                    <div class="heading-wrapper">
-                        <h2>美文浏览</h2>
-                        <div class="hr"></div>
-                        <div class="sub-heading">
-                           这一刻就我想静静，那么，你了？
-                        </div>
-                    </div>
-                    <div class="card-group">
-                        <div class="card">
-                            <h3>友情</h3>
-                            <p>那些年我们一起追过的女孩</p>
-                        </div>
-                        <div class="card">
-                            <h3>爱情</h3>
-                            <p>何以笙箫默</p>
-                        </div>
-                        <div class="card">
-                            <h3>文艺</h3>
-                            <p>花钱一杯酒</p>
-                        </div>
-                        <div class="card">
-                            <h3>犯二</h3>
-                            <p>犯二的小朋友们，你们在哪
-                            </p>
-                        </div>
-                        <div class="card">
-                            <h3>产品</h3>
-                            <p>追求中</p>
-                        </div>
-                        <div class="card">
-                            <h3>蓝天</h3>
-                            <p>大海与白云</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <!-- 内容end -->
-        <!-- 页脚start -->
-        <footer>
-            <ul class="share-group">
-                <li>新浪</li>
-                <li>空间</li>
-                <li>微信</li>
-                <li>陌陌</li>
-                <li>GTIHUB</li>
-            </ul>
-            <div class="copy">
-                &copy 初觉 - 2050
-            </div>
-        </footer>
-        <!-- 页脚end -->
-    </div>
+	<div class="beijingtu">
+	<header>
+		<nav>
+			<div id='logo'>
+			<a href="#">
+			陈世豪
+			</a>
+			</div>
+			<ul>
+				<li><a href="#">链接2</a></li>
+				<li><a href="#">链接3</a></li>
+				<li><a href="#">链接4</a></li>
+			</ul>
+		</nav>
+		<div id="banner">
+			<div class="inner">
+			<h1>花飞花落尽</h1>
+			<p>薄红の时を彩る花びら</p>
+			<p>ひらひら舞う光の中</p>
+			<button>走开啦骚包</button>
+			<div class="more">
+				更多
+			</div>
+			</div>
+		</div>
+	</header>		
+	<div id="content">
+	<section class="green-section">
+		<div class="wrapper">
+			<h2>亦合亦散欢</h2>
+			<div class="spline"></div>
+			<p>鲜やかな日々に</p>
+			<p>仆らが残した </p>
+			<p>砂の城は波に溶けて</p>
+			<p>きっと梦が终わる</p>
+			<div class="icon-group">
+				<span class="icon"></span>
+				<span class="icon"></span>
+				<span class="icon"></span>
+			</div>
+		</div>
+	</section>
+	<section class="grey-section">
+		<article class='preview'>
+		<div class="img-section">
+			<img src="img/pic01.jpg" alt="01">
+		</div>
+		<div class="text-section">
+			<h2>沙堡崩解在海浪中</h2>
+			<p>真っ白な世界で目を覚ませば</p>
+			<p>伸ばす腕は何もつかめない</p>
+			<p>见上げた空が近くなるほどに</p>
+			<p>仆は何を失った？</p>
+		</div>
+		</article>
+		<article class='preview'>
+			<div class="text-section">
+			<h2>11区涉谷</h2>
+			<p>仆は歌うよ</p>
+			<p>笑颜をくれた君が泣いてるとき</p>
+			<p>ほんの少しだけでもいい</p>
+			<p>君の支えになりたい</p>
+		</div>
+		<div class="img-section">
+			<img src="img/pic02.jpg" alt="02">
+		</div>
+		</article>
+		<article class='preview'>
+		<div class="img-section">
+			<img src="img/pic03.jpg" alt="03">
+		</div>
+		<div class="text-section">
+			<h2>路一直都在</h2>
+			<p>远く离れた君のもとへ</p>
+			<p>空を越えて羽ばたいてゆく</p>
+			<p>君の心の片隅で</p>
+			<p>辉く星になりたい</p>
+		</div>
+		</article>
+		<article class='preview'>
+	</section>
+	<section class="purple-section">
+		<div class="pur-head">
+			<h2>李白</h2>
+			<div class="pur-line"></div>
+			<p>字太白，生平不详，听说搞基，一生全靠浪。</p>
+		</div>
+		<div class="card-group">
+			<div class="card">
+				<h2>《送友人》</h2>
+				<p>青山横北郭，白水绕东城。</p>
+				<p>此地一为别，孤蓬万里征。</p>
+				<p>浮云游子意，落日故人情。</p>
+				<p>挥手自兹去，萧萧班马鸣。</p>
+			</div>
+			<div class="card">
+				<h2>《夜宿山寺》</h2>
+				<p>危楼高百尺，</p>
+				<p>手可摘星辰。</p>
+				<p>不敢高声语，</p>
+				<p>恐惊天上人。</p>
+			</div>
+		</div>
+			<div class="card-group">
+			<div class="card">
+				<h2>《独坐敬亭山》</h2>
+				<p>众鸟高飞尽，</p>
+				<p>孤云独去闲。</p>
+				<p>相看两不厌，</p>
+				<p>只有敬亭山。</p>
+			</div>
+			<div class="card">
+				<h2>《春思》</h2>
+				<p>燕草如碧丝，秦桑低绿枝。</p>
+				<p>当君怀归日，是妾断肠时。</p>
+				<p>春风不相识，何事入罗帏。</p>
+			</div>
+		</div>
+	</section>
+	</div>
+	<footer>
+		<ul class="share-group">
+			<li>微博</li>
+			<li>知乎</li>
+			<li>豆瓣</li>
+			<li>博客园</li>
+		</ul>
+		<div>陈世豪·2016/02/25·优化中·欢迎参观</div>
+	</footer>
+	</div>
 </body>
 </html>
